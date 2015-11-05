@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var a = document.createElement('a');
     a.download = $('#name').value;
     a.type = $('#type').value;
-    a.href = 'data:text/plain,' + window.btoa($('#content').value);
+    a.href = 'data:text/plain;base64,' + window.btoa($('#content').value);
     document.body.appendChild(a);
     a.click();
     a.parentElement.removeChild(a);
